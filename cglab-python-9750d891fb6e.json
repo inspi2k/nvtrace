@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "cglab-python",
+  "private_key_id": "9750d891fb6e2aec14326333e52ed655907c9dc9",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCimHbCFYYnKiMd\nvvAYuY8D/EkhrQK9aOPu5slhcJtTFGejTgrO0wt887LHzduRp/849OUHoyIogaZ3\nze4kNWLh4sTYxWzTe5vD/Oubu8gA129vv6u5kiqV2WcO0D4aHGolp1sbC5TmZp6I\nQ7oYs4yaP5r6ORJPW3CdYD3kluj0nwbuN1LDN0rv29ps2NC5wRI4OW0qRAwyGFaD\nxSCbGwqT05nVmMCTjE64PZgBdYFYi/7TfKkby419AZagEB80c3ImzCCegVufLVry\nkCR1WsnepikvTVx84cCxxWztOLwKRMO7+X8nBSKlKWgGirlyTl6QtzX9xa4FeYWS\nfbqbEeOLAgMBAAECggEALOCI8rOvJdMnAxhGu4RHuXFiG/XdKjsvoio3zfmfHVSl\n8Dhjmkc8xf2bTDOA1Vh5hJZvOmbn0CdMs4d2oa7Mfo0xCKWhDlPxH6yIuSCgqL7N\nhpnwA1WZBGgPXlLSuTE7iO4CotnU/Ky5N+H9lMDF33MLyuGCsL2LvRwpqRSP8qga\n2MTj+cK4GS1Yg/nSKi1MnpmGZ+8tKDBLS+qByRsCX4Hescu80an8zFWryJwJkuSL\nKfZ9rhAMn4/FqlUQzMtXrbXzXCqzjCiYB/BSRdL10V2CeLN/gidlPSERvcH+rc1D\nvcUGEJfaHhsbA5P3ASTOtfSjqtAEbP3ww+T8cPRzIQKBgQDe40zQB+V21ZLXCJrq\nECqBHWMqT3QV57YfGAvvfsM/tGIslsonaAsEMDHlIfApC8gpUlRpreUHk3fuSPPN\n+rX6fxnEdLS4yeanwKo1PunmZi3TVwFOzuBsFdHsM/L9oaqJ6CufD7V662pTpsjl\ntcnO/V7kTck/RTubaG7+oQn8qwKBgQC6wCwwicLsnAQi/zcrYXBCLU+pkz3FZvVi\nBjsEqarBaysrkVMviTn/bQdb+NI9nbWWrH2LMAdrE8jqqkZ7sxjStI9Efce+SL0M\nefOL2E0ogKcZE9vgbKvAQskC6MIeOY9T5zJXF4R9tsyr51xmquSzp2wx2g1bFfHu\nwIgsXuX0oQKBgFOPr+qGK1cD9ws7JKj/6o+Bbv4bz4+u0S6TG1ZsldK6U9wXpC5l\n6Utmri4TLTCWRDKJtS/xi93tQZdKLm1YwwToxcZLYr2spBbcOnO/5H0GbcO/6LOd\nB7I98/ez+jNwerk9G62EfCtbOv+llcfZAZHil8LMDtjzocc/ve0kftQFAoGAPwMS\npfoFtFJcLvbQRanl995UD9KnuBCqYT3a8hLRk9u2QEgTumliEWZXYlgNkE7Dc6iV\n373/8shFNbDogVqH2Kil4qVSHUlryGbpn1kHh9AJEbQar5nbRc8DBiFFRm+Dhfrv\niGVeBhEE9EfnbJji/B9UqWl6si4waK+8AsSucKECgYAUf014cKd82AHybUgYoPZe\nInBNbn+MO5sICLTYzgrcS/oXvrt3+FazK2xdIZCebkW2io3tIWEJFc1/fUe894vp\nGWhZBJgpIIeWavaeM1KDFwdFC3z4AA5xwkEHECuSGko/B6E9D0cl6alXqxvqaYWp\nbjTmmSFnBlbNQf6165fquw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "cglab-python@cglab-python.iam.gserviceaccount.com",
+  "client_id": "111662243893540345857",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cglab-python%40cglab-python.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
