@@ -73,14 +73,14 @@ except Exception as e:
 print(f'OK / Reading Data - {len(list_mid)} MIDs')
 
 # console view - list
-print('-----------')
-for i in range(len(list_mid)):  # for key in list_keyword:
-  print(list_mid[i], end=' ')
-  print(f'[{len(list_keyword[i]):>2}]', end=' ')
-  for keyword in list_keyword[i]: # for keyword in key:
-    print(keyword, end=' ')
-  print()
-print('-----------')
+# print('-----------')
+# for i in range(len(list_mid)):  # for key in list_keyword:
+#   print(list_mid[i], end=' ')
+#   print(f'[{len(list_keyword[i]):>2}]', end=' ')
+#   for keyword in list_keyword[i]: # for keyword in key:
+#     print(keyword, end=' ')
+#   print()
+# print('-----------')
 
 # 2. open api - search
 try:
