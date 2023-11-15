@@ -52,11 +52,19 @@ try:
         items_num.insert(i, '')
 
     list_mid.append(items[1]) # row(2) - MID
-    list_keyword.append(list(map(str, items[2:]))) # row(3)~ - keywords
-    list_keyword_num.append(list(map(str, items_num[2:])))
+    # list_keyword.append(list(map(str, items[2:]))) # row(3)~ - keywords
+    # list_keyword_num.append(list(map(str, items_num[2:])))
+    lk = []
+    lk_num = []
+    for v in range(2, len(items[2:])+2):
+      if items[v].strip() != '':
+        lk.append(items[v].strip())
+        lk_num.append(items_num[v].strip())
+    list_keyword.append(lk)
+    list_keyword_num.append(lk_num)
 
 except gspread.exceptions.APIError as e:
-  print('No More Columns on Sheet')
+  print('No More Columns on Sheet\n')
 
 except Exception as e:
   print('Sheet Processing Exception:',e)
@@ -65,14 +73,14 @@ except Exception as e:
 print(f'OK / Reading Data - {len(list_mid)} MIDs')
 
 # console view - list
-# print('-----------')
-# for i in range(len(list_mid)):  # for key in list_keyword:
-#   print(list_mid[i], end=' ')
-  # print(f'[{len(list_keyword[i]):>2}]', end=' ')
-#   for keyword in list_keyword[i]: # for keyword in key:
-#     print(keyword, end=' ')
-#   print()
-# print('-----------')
+print('-----------')
+for i in range(len(list_mid)):  # for key in list_keyword:
+  print(list_mid[i], end=' ')
+  print(f'[{len(list_keyword[i]):>2}]', end=' ')
+  for keyword in list_keyword[i]: # for keyword in key:
+    print(keyword, end=' ')
+  print()
+print('-----------')
 
 # 2. open api - search
 try:
@@ -93,6 +101,8 @@ try:
 
       pm_start = 1
       found_it = False
+      long_sleep = False  # 많은 요청을 줄이는 용도 확인용 변수
+
       while (found_it == False) and (pm_start <= 1000):
         pm_display = 99 if pm_start == 1 else 100
         # if pm_start == 1: pm_display = 99
@@ -100,8 +110,12 @@ try:
         
         # api limit per second
         if (pm_start % 100) == 0:
-            # print(',', end='', flush=True)
+            print(',', end='', flush=True)
             time.sleep(0.1)
+            if (pm_start > 500) and (long_sleep == False):
+              long_sleep = True
+              print('_', end='', flush=True)
+              time.sleep(1)
 
         # nv open api
         url = (f'https://openapi.naver.com/v1/search/shop?start={pm_start}&display={pm_display}&query={encText}')
@@ -120,6 +134,8 @@ try:
           sys.exit(1)
 
         data = json.loads(response_body.decode('utf-8'))  # JSON 형태의 문자열 읽기
+
+        if data['total'] == 0: break  # total 이 1,000개 미만 짜리 처리
 
         for prd in data['items']:
           if list_mid[mid_count] == prd['productId']:
@@ -149,7 +165,9 @@ try:
     print()
 
 except Exception as e:
-  print('API Call Exception:',e)
+  print('\nAPI Call Exception:',e)
+  print(url)
+  print(response_body.decode('utf-8'))
   sys.exit(1)
 
 # console view - list
