@@ -57,7 +57,7 @@ try:
     lk = []
     lk_num = []
     for v in range(2, len(items[2:])+2):
-      if items[v].strip() != '':
+      if (items[v].strip() != '') and ('xx' not in items[v]):
         lk.append(items[v].strip())
         lk_num.append(items_num[v].strip())
     list_keyword.append(lk)
